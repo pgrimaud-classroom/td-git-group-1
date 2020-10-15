@@ -3,9 +3,19 @@
 $x = 10;
 $y = 20;
 
+/**
+ * exo 1
+ */
 $sum = $x + $y;
+
+/**
+ * exo 2
+ */
 $mul = $x * 2;
 
+/**
+ * exo 3
+ */
 $xxx = rand(1, 5);
 /*if ($xxx === 1) {
     echo "hello";
@@ -28,8 +38,10 @@ switch($xxx) {
         echo "yo";
 }
 
+/**
+ * exo 4
+ */
 $note = rand(0, 20);
-
 if ($note <= 10){
     echo "bof";
 } elseif ($note > 10 && $note <= 12) {
@@ -41,4 +53,39 @@ if ($note <= 10){
 } else {
     echo "tres-bien";
 }
+
+/**
+ * exo 5
+ */
+$age = 29;
+$tern = ($age >= 23) ? "oui" : "non";
+
+/**
+ * exo 6
+ */
+function tax($salaire) {
+    $tax = ($salaire < 1000) ? $salaire*(10/100) : $salaire*(25/100);
+    return $tax;
+}
+
+/**
+ * exo 7
+ */
+
+for ($i = 1 ; $i <= 100; $i++) {
+    $sum += $i;
+}
+echo $sum;
+
+$x = 0;
+$i = 1;
+while ($i <= 100) {
+    $x += $i;
+    $i++;
+}
+echo $x;
+
+/**
+ * exo 8
+ */
 
