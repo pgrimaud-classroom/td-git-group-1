@@ -88,4 +88,22 @@ echo $x;
 /**
  * exo 8
  */
+for ($i = 1; $i < 100; $i++) {
+    if($i % 3 === 0) {
+        echo $i."\n"."fizz"."<br>";
+    }
+    if($i % 5 === 0) {
+        echo $i."\n"."buzz"."<br>";
+    }
+    if($i % 15 === 0) {
+        echo $i."\n"."fizzbuzz"."<br>";
+    }
+    if($i % 15 !== 0 && $i % 5 !== 0 && $i % 3 !== 0) {
+        echo $i."\n"."<br>";
+    }
+}
+
+/**
+ * exo 9
+ */
 
