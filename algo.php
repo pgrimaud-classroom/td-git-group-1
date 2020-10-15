@@ -43,30 +43,32 @@ switch($xxx) {
  */
 $note = rand(0, 20);
 if ($note <= 10){
-    echo "bof";
+    echo $note."/20 : Bof";
 } elseif ($note > 10 && $note <= 12) {
-    echo "passable";
+    echo $note."/20 : Passable";
 } elseif ($note > 12 && $note <= 14) {
-    echo "assez bien";
+    echo $note."/20 : Assez bien";
 } elseif ($note > 14 && $note <= 16) {
-    echo "bien";
+    echo $note."/20 : Bien";
 } else {
-    echo "tres-bien";
+    echo $note."/20 : Tres-bien";
 }
 
 /**
  * exo 5
  */
 $age = 29;
-$tern = ($age >= 23) ? "oui" : "non";
+$older_than_23 = $age >= 23 ? "oui" : "non";
+echo $older_than_23;
 
 /**
  * exo 6
  */
-function tax($salaire) {
+function tax(int $salaire) {
     $tax = ($salaire < 1000) ? $salaire*(10/100) : $salaire*(25/100);
     return $tax;
 }
+echo tax(1600);
 
 /**
  * exo 7
@@ -76,6 +78,8 @@ for ($i = 1 ; $i <= 100; $i++) {
     $sum += $i;
 }
 echo $sum;
+
+
 
 $x = 0;
 $i = 1;
@@ -106,4 +110,50 @@ for ($i = 1; $i < 100; $i++) {
 /**
  * exo 9
  */
+
+
+function tree($lines)
+{
+    for($i=1; $i<$lines; $i++)
+    {
+        if($i <= ($lines/2))
+        {
+            echo str_repeat('a', $i)."\n";
+        }else{
+            echo str_repeat('a', ($lines-$i))."\n";
+        }
+    }
+}
+tree(10);
+
+/**
+ * exo 10
+ */
+$user = [
+    "firstname" => "pierre",
+    "lastname" => "grimaud",
+    "age" => "30",
+    "job" => "teacher",
+];
+foreach ($user as $key => $value) {
+    echo $key.": ".$value."<br>";
+}
+
+/**
+ * exo 11
+ */
+
+$numbers = [];
+for ($i = 1; $i <= 100; $i++) {
+    $numbers[] = rand(10, 1000);
+    if ($numbers[$i] > $numbers[$i+1]) {
+
+    }
+}
+echo $numbers;
+
+
+
+
+
 
