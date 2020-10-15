@@ -73,21 +73,21 @@ echo tax(1600);
 /**
  * exo 7
  */
+    // FOR
+    for ($i = 1 ; $i <= 100; $i++) {
+        //$sum = $sum + $i;
+        $sum += $i;
+    }
+    echo $sum;
 
-for ($i = 1 ; $i <= 100; $i++) {
-    $sum += $i;
-}
-echo $sum;
-
-
-
-$x = 0;
-$i = 1;
-while ($i <= 100) {
-    $x += $i;
-    $i++;
-}
-echo $x;
+    // WHILE
+    $a = 0;
+    $i = 1;
+    while ($i <= 100) {
+        $a += $i;
+        $i++;
+    }
+    echo $a;
 
 /**
  * exo 8
@@ -143,14 +143,102 @@ foreach ($user as $key => $value) {
  * exo 11
  */
 
-$numbers = [];
-for ($i = 1; $i <= 100; $i++) {
-    $numbers[] = rand(10, 1000);
-    if ($numbers[$i] > $numbers[$i+1]) {
+$array = [ 1, 6 , 3, 9];
+echo implode(",", $array);
 
+
+if ($array[0] > $array[1]) {
+    $abc = $array[0];
+    $def = $array[1];
+
+    $array[0] = $def;
+    $array[1] = $abc;
+}
+echo implode(",", $array);
+
+/////////////////////////////
+$numbers = [];
+for ($i = 1; $i <= 10; $i++) {
+    $numbers[] = rand(10, 1000);
+}
+echo implode(" - ",$numbers)."<br>";
+
+
+for ($j = 0; $j < 10; $j++) {
+    if ($numbers[$j] > $numbers[$j + 1]) {
+        $abc = $numbers[$j];
+        $def = $numbers[$j + 1];
+
+        $numbers[$j] = $def;
+        $numbers[$j + 1] = $abc;
     }
 }
-echo $numbers;
+for ($j = 0; $j < 10; $j++) {
+    if ($numbers[$j] > $numbers[$j + 1]) {
+        $abc = $numbers[$j];
+        $def = $numbers[$j + 1];
+
+        $numbers[$j] = $def;
+        $numbers[$j + 1] = $abc;
+    }
+}
+for ($j = 0; $j < 10; $j++) {
+    if ($numbers[$j] > $numbers[$j + 1]) {
+        $abc = $numbers[$j];
+        $def = $numbers[$j + 1];
+
+        $numbers[$j] = $def;
+        $numbers[$j + 1] = $abc;
+    }
+}
+for ($j = 0; $j < 10; $j++) {
+    if ($numbers[$j] > $numbers[$j + 1]) {
+        $abc = $numbers[$j];
+        $def = $numbers[$j + 1];
+
+        $numbers[$j] = $def;
+        $numbers[$j + 1] = $abc;
+    }
+}
+for ($j = 0; $j < 10; $j++) {
+    if ($numbers[$j] > $numbers[$j + 1]) {
+        $abc = $numbers[$j];
+        $def = $numbers[$j + 1];
+
+        $numbers[$j] = $def;
+        $numbers[$j + 1] = $abc;
+    }
+}
+for ($j = 0; $j < 10; $j++) {
+    if ($numbers[$j] > $numbers[$j + 1]) {
+        $abc = $numbers[$j];
+        $def = $numbers[$j + 1];
+
+        $numbers[$j] = $def;
+        $numbers[$j + 1] = $abc;
+    }
+}
+for ($j = 0; $j < 10; $j++) {
+    if ($numbers[$j] > $numbers[$j + 1]) {
+        $abc = $numbers[$j];
+        $def = $numbers[$j + 1];
+
+        $numbers[$j] = $def;
+        $numbers[$j + 1] = $abc;
+    }
+}
+for ($j = 0; $j < 10; $j++) {
+    if ($numbers[$j] > $numbers[$j + 1]) {
+        $abc = $numbers[$j];
+        $def = $numbers[$j + 1];
+
+        $numbers[$j] = $def;
+        $numbers[$j + 1] = $abc;
+    }
+}
+
+echo implode(" - ",$numbers);
+
 
 
 
