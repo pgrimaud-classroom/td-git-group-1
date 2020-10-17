@@ -143,51 +143,30 @@ foreach ($user as $key => $value) {
  * exo 11
  */
 
-$array = [ 1, 6 , 3, 9];
-echo implode(",", $array);
-
-
-if ($array[0] > $array[1]) {
-    $abc = $array[0];
-    $def = $array[1];
-
-    $array[0] = $def;
-    $array[1] = $abc;
-}
-echo implode(",", $array);
-
-/////////////////////////////
 $numbers = [];
-for ($i = 1; $i <= 20; $i++) {
+for ($i = 1; $i <= 100; $i++) {
     $numbers[] = rand(10, 1000);
 }
-echo implode(" - ",$numbers)."<br><br>";
+echo implode(" - ", $numbers) . "<br><br><br>";
 
-  for ($j = 0; $j < 20; $j++) {
+$counter = 0;
+while ($counter <= 100) {
 
-      if ($numbers[$j] > $numbers[$j + 1]) {
-          $abc = $numbers[$j];
-          $def = $numbers[$j + 1];
+    for ($j = 0; $j < 100; $j++) {
 
-          $numbers[$j] = $def;
-          $numbers[$j + 1] = $abc;
-      }
-  }
+        if ($numbers[$j] > $numbers[$j + 1]) {
+            $abc = $numbers[$j];
+            $def = $numbers[$j + 1];
 
-  for ($j = 0; $j < 20; $j++) {
+            $numbers[$j] = $def;
+            $numbers[$j + 1] = $abc;
+        }
+    }
 
-      if ($numbers[$j] > $numbers[$j + 1]) {
-          $abc = $numbers[$j];
-          $def = $numbers[$j + 1];
+    $counter += 1;
+}
 
-          $numbers[$j] = $def;
-          $numbers[$j + 1] = $abc;
-      }
-  }
-
-
-echo implode(" - ",$numbers);
-
+echo implode(" - ", $numbers) . "<br><br><br>";
 
 
 
